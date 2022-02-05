@@ -5,6 +5,10 @@ void main() {
   //locat.loc = "Isolo";
   locat.houseType();
   locat.houseremark();
+
+  // ignore: unused_local_variable
+  var houseD = location.numberHouseConstructor(200, "Duplex");
+
 }
 
 class House {
@@ -21,7 +25,13 @@ class House {
 
 class location extends House {
   late String loc;
+  late int houseNum;
   location.constructor(String type, String loc) : super.constructor(type);
+
+  location.numberHouseConstructor(int houseNum, String type)
+      : super.constructor(type) {
+    print("Number of ${type} is ${houseNum}");
+  }
   void houseLoc() {
     print("My house location is $loc");
   }
