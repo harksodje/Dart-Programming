@@ -13,7 +13,8 @@ abstract class shape {
   late int y;
   shape(this.x, this.y);
   void area() {
-    print("area :: {x*y}");
+    print("x:$x :: y:$y");
+    print("area :: ${x * y}");
   }
 }
 
